@@ -708,7 +708,7 @@ class Model extends REST\Model
     {
         return array(
             'name' => $this->name,
-            'type' => $this->mimeTypesMap[$this->type] ? $this->mimeTypesMap[$this->type] : $this->type,
+            'type' => isset($this->mimeTypesMap[$this->type]) ? $this->mimeTypesMap[$this->type] : $this->type,
             'size' => $this->size,
             'id' => $this->id
         );
