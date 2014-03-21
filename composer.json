@@ -19,8 +19,8 @@
 		"php" : ">=5.4"
 	},
 	"autoload" : {
-		"psr-0" : {
-			"Bread\\Media" : "src"
+		"psr-4" : {
+			"Bread\\Media\\" : "src"
 		}
 	}
 }
