@@ -17,6 +17,14 @@ class Model extends REST\Model
 
     public $size;
 
+    public function __destruct()
+    {
+        if (is_resource($this->data)) {
+            fclose($this->data);
+        }
+        parent::__destruct();
+    }
+
     public function jsonSerialize()
     {
         $mimeTypesMap = array(
